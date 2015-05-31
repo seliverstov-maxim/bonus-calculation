@@ -212,7 +212,6 @@ PLATFORMS
 DEPENDENCIES
   byebug
   cocoon
-  coffee-rails (~> 4.1.0)
   factory_girl_rails
   haml-rails
   jbuilder (~> 2.0)
