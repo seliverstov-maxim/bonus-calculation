@@ -5,7 +5,7 @@ class Bonus
   include Virtus.model
 
   attribute :result, Integer
-  attribute :sales_type, String
+  attribute :bonus_type, String
   attribute :prepayment_percent, Integer
   attribute :mulct_type, String
 
@@ -15,6 +15,10 @@ class Bonus
   attribute :month_count, Integer
   attribute :monthly_income, Integer
   attribute :special_bonus, Integer
+
+  attribute :verbal_complaints, Integer
+  attribute :written_complaints, Integer
+  attribute :letters_of_thanks, Boolean
 
   def persisted?
     false

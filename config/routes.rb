@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope module: :web do
-    resources :bonuses
-    resource :bonus_calculation
+    root 'bonus_calculations#new'
+    resource :bonus_calculation, only: [:new, :create]
   end
 end

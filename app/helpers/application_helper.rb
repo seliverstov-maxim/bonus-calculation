@@ -7,12 +7,13 @@ module ApplicationHelper
     end
   end
 
-  def detect_calc_strategy(sales_type)
-    return OutstaffFormula if ['outstaff_ruby', 'outstaff_markup', 'outstaff_development'].include? sales_type
+  def detect_calc_strategy(bonus_type)
+    return OutstaffFormula if ['outstaff_ruby', 'outstaff_markup', 'outstaff_development'].include? bonus_type
+    return PmFormula if %w[pm_ahead_of_schedule pm_in_time pm_delayed_by_2_weeks_fault_customer pm_delayed_by_2_weeks_fault_company pm_delayed_by_4_weeks_fault_company].include? bonus_type
     BaseFormula
   end
 
-  def sales_type_collection
+  def bonus_type_collection
     %w[
       ds_development
       ds_design
@@ -27,6 +28,11 @@ module ApplicationHelper
       outstaff_ruby
       outstaff_markup
       outstaff_development
+      pm_ahead_of_schedule
+      pm_in_time
+      pm_delayed_by_2_weeks_fault_customer
+      pm_delayed_by_2_weeks_fault_company
+      pm_delayed_by_4_weeks_fault_company
     ].each_with_object({}) do |key, obj|
       translate = t key
       obj[translate] = key

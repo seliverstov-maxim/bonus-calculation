@@ -1,4 +1,16 @@
 ---
+:default_pm_bonus_coefficients: &default_pm_bonus_coefficients
+  :base_percent: 4
+  :verbal_complaints: -100
+  :written_complaints: -250
+  :letters_of_thanks: 500
+  :deadline_bonus_coefficients:
+    :pm_ahead_of_schedule: 1.5
+    :pm_in_time: 1
+    :pm_delayed_by_2_weeks_fault_customer: 1
+    :pm_delayed_by_2_weeks_fault_company: -0.5
+    :pm_delayed_by_4_weeks_fault_company: -1
+
 :default_prepayment_coefficients: &default_prepayment_coefficients
   - :from: 0
     :to: 49.99
@@ -15,7 +27,7 @@
   :no_prepayment: 0.5
   :no_latter: 0.5
 
-:sales_types:
+:bonus_types:
   :ds_development:
     :base_percent: 4
     :percent_for_first_sale: 0
@@ -93,3 +105,10 @@
     :percent_for_first_sale: 0
     :prepayment_coefficients: *default_prepayment_coefficients
     :mulct_coefficients: *default_mulct_coefficients
+
+  :pm_ahead_of_schedule: *default_pm_bonus_coefficients
+  :pm_in_time: *default_pm_bonus_coefficients
+  :pm_delayed_by_2_weeks_fault_customer: *default_pm_bonus_coefficients
+  :pm_delayed_by_2_weeks_fault_company: *default_pm_bonus_coefficients
+  :pm_delayed_by_4_weeks_fault_company: *default_pm_bonus_coefficients
+

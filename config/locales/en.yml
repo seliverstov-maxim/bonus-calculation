@@ -1,22 +1,28 @@
 en:
   bonus_calculations: 'Расчет бонусов'
 
-  ds_development: 'Прямые продажи разработка'
-  ds_design: 'Прямые продажи дизайн'
-  ds_support: 'Прямые продажи поддержка'
-  ds_seo: 'Прямые продажи SEO'
-  ds_development_for_perspective_customer: 'Прямые продажи разработка для персп. клиентов'
-  p_development: 'Партнеры разработка'
-  p_design: 'Партнеры дизайн'
-  p_support: 'Партнеры поддержка'
-  p_seo: 'Партнеры SEO'
-  outsource_development: 'Аутстафф разработка'
-  outstaff_ruby: 'Аутстафф Ruby'
-  outstaff_markup: 'Аутстафф верстка'
-  outstaff_development: 'Аутстафф разработка'
+  ds_development: 'Sales: Прямые продажи разработка'
+  ds_design: 'Sales: Прямые продажи дизайн'
+  ds_support: 'Sales: Прямые продажи поддержка'
+  ds_seo: 'Sales: Прямые продажи SEO'
+  ds_development_for_perspective_customer: 'Sales: Прямые продажи разработка для персп. клиентов'
+  p_development: 'Sales: Продажи разработки партнерам'
+  p_design: 'Sales: Продажи дизайн партнерам'
+  p_support: 'Sales: Продажи поддержка партнерам'
+  p_seo: 'Sales: Продажи SEO партнерам'
+  outsource_development: 'Sales: Продажа аутсорс разработки'
+  outstaff_ruby: 'Sales: Продажа аутстафф Ruby'
+  outstaff_markup: 'Sales: Продажа аутстафф верстки'
+  outstaff_development: 'Sales: Продажа аутстафф разработки'
+
+  pm_ahead_of_schedule: 'PM: Проект сдан раньше времени'
+  pm_in_time: 'PM: Проект сдан вовремя'
+  pm_delayed_by_2_weeks_fault_customer: 'PM: Проект задержан на 2 недели по вине заказчика'
+  pm_delayed_by_2_weeks_fault_company: 'PM: Проект задержан на 2 недели по вине компании'
+  pm_delayed_by_4_weeks_fault_company: 'PM: Проект задержан на 4 недели по вине компании'
 
   result: 'Результат'
-  sales_type: 'Тип продажи'
+  bonus_type: 'Тип бонуса'
   first_sale: 'Первая продажа'
   sum: 'Сумма'
   mulct_type: 'Штраф'
@@ -25,12 +31,14 @@ en:
   month_count: 'Количество месяцев'
   prepayment_percent: 'Процент предоплаты'
 
+  verbal_complaints: 'Количество устных жалоб'
+  written_complaints: 'Количество письменных жалобы'
+  letters_of_thanks: 'Благодарственные письма'
+
   activerecord:
     models:
       bonus_calculation: 'Расчет бонусов'
     attributes:
       bonus:
-        sales_type: 'Тип продажи'
         first_sale: 'Первая продажа'
-        sum: 'Сумма'
-        mulct_type: 'Штраф'
+        letters_of_thanks: 'Благодарственные письма'
