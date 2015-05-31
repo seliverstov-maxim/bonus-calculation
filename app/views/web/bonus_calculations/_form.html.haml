@@ -1,0 +1,9 @@
+= simple_form_for @form, url: bonus_calculation_path, wrapper: :inline_form,
+  html: { class: 'form-inline' } do |f|
+  .nested
+    = f.simple_fields_for :bonuses do |bonus_fields|
+      = render partial: 'bonus_fields', locals: {f: bonus_fields}
+  .active
+    .btn-group
+      = bonus_link_to_add_association 'Добавить новую строку', f, :bonuses, class: 'btn btn-default'
+      = f.button :submit, 'Подсчитать', class: 'btn btn-default'

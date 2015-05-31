@@ -1,0 +1,21 @@
+.bonuses-calculation-form .hidden-fields {
+  display: none;
+}
+
+.nested-fields {
+  margin-bottom: 30px;
+  border-bottom: solid 1px black;
+}
+
+.form-inline .form-group {
+  margin-bottom: 6px;
+}
+
+.nested-fields .other-param, .nested-fields .outstaff-param {
+  display: none;
+}
+
+.help-block {
+  margin: 0px;
+  min-height: 20px
+}

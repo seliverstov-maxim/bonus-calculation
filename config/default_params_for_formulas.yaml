@@ -1,0 +1,95 @@
+---
+:default_prepayment_coefficients: &default_prepayment_coefficients
+  - :from: 0
+    :to: 49.99
+    :coefficient: 0.8
+  - :from: 50
+    :to: 69.99
+    :coefficient: 1
+  - :from: 70
+    :to: 100
+    :coefficient: 1.2
+
+:default_mulct_coefficients: &default_mulct_coefficients
+  :no_contract: 0.5
+  :no_prepayment: 0.5
+  :no_latter: 0.5
+
+:sales_types:
+  :ds_development:
+    :base_percent: 4
+    :percent_for_first_sale: 0
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :ds_design:
+    :base_percent: 5
+    :percent_for_first_sale: 0
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :ds_support:
+    :base_percent: 8
+    :percent_for_first_sale: 0
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :ds_seo:
+    :base_percent: 8
+    :percent_for_first_sale: 0
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :ds_development_for_perspective_customer:
+    :base_percent: 4
+    :percent_for_first_sale: 1
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :p_development:
+    :base_percent: 3
+    :percent_for_first_sale: 1
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :p_design:
+    :base_percent: 3
+    :percent_for_first_sale: 1
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :p_support:
+    :base_percent: 6
+    :percent_for_first_sale: 1
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :p_seo:
+    :base_percent: 6
+    :percent_for_first_sale: 1
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :outsource_development:
+    :base_percent: 3
+    :percent_for_first_sale: 1
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :outstaff_ruby:
+    :base_percent: 3
+    :percent_for_first_sale: 0
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :outstaff_markup:
+    :base_percent: 3
+    :percent_for_first_sale: 0
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients
+
+  :outstaff_development:
+    :base_percent: 3
+    :percent_for_first_sale: 0
+    :prepayment_coefficients: *default_prepayment_coefficients
+    :mulct_coefficients: *default_mulct_coefficients

@@ -1,0 +1,36 @@
+en:
+  bonus_calculations: 'Расчет бонусов'
+
+  ds_development: 'Прямые продажи разработка'
+  ds_design: 'Прямые продажи дизайн'
+  ds_support: 'Прямые продажи поддержка'
+  ds_seo: 'Прямые продажи SEO'
+  ds_development_for_perspective_customer: 'Прямые продажи разработка для персп. клиентов'
+  p_development: 'Партнеры разработка'
+  p_design: 'Партнеры дизайн'
+  p_support: 'Партнеры поддержка'
+  p_seo: 'Партнеры SEO'
+  outsource_development: 'Аутстафф разработка'
+  outstaff_ruby: 'Аутстафф Ruby'
+  outstaff_markup: 'Аутстафф верстка'
+  outstaff_development: 'Аутстафф разработка'
+
+  result: 'Результат'
+  sales_type: 'Тип продажи'
+  first_sale: 'Первая продажа'
+  sum: 'Сумма'
+  mulct_type: 'Штраф'
+  monthly_income: 'Ежемесячный доход'
+  special_bonus: 'Специальный бонус %'
+  month_count: 'Количество месяцев'
+  prepayment_percent: 'Процент предоплаты'
+
+  activerecord:
+    models:
+      bonus_calculation: 'Расчет бонусов'
+    attributes:
+      bonus:
+        sales_type: 'Тип продажи'
+        first_sale: 'Первая продажа'
+        sum: 'Сумма'
+        mulct_type: 'Штраф'
