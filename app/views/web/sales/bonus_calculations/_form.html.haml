@@ -1,7 +1,8 @@
 %h1= t('bonus_calculations')
 %h3
-  = "Сумма бонусов: #{@total_result} р."
-= simple_form_for @form, url: bonus_calculation_path, wrapper: :inline_form,
+  - if @total_result
+    = "Сумма бонусов: #{@total_result} р."
+= simple_form_for @form, url: sales_bonus_calculation_path, wrapper: :inline_form,
   html: { class: 'form-inline' } do |f|
   .nested
     = f.simple_fields_for :bonuses do |bonus_fields|

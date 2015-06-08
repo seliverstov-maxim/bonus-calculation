@@ -1,4 +1,4 @@
-class BonusCalculationForm < Reform::Form
+class SalesBonusCalculationForm < Reform::Form
   include Reform::Form::ModelReflections
 
   collection :bonuses do
@@ -14,9 +14,5 @@ class BonusCalculationForm < Reform::Form
     property :month_count
     property :monthly_income
     property :special_bonus
-
-    property :verbal_complaints
-    property :written_complaints
-    property :letters_of_thanks
   end
 end

@@ -1,0 +1,13 @@
+%h1= t('bonus_calculations')
+%h3
+  - if @total_result
+    = "Сумма бонусов: #{@total_result} р."
+= simple_form_for @form, url: pm_bonus_calculation_path, wrapper: :inline_form,
+  html: { class: 'form-inline' } do |f|
+  .nested
+    = f.simple_fields_for :bonuses do |bonus_fields|
+      = render partial: 'bonus_fields', locals: {f: bonus_fields}
+  .active
+    .btn-group
+      = bonus_link_to_add_association 'Добавить новую строку', f, :bonuses, class: 'btn btn-default'
+      = f.button :submit, 'Подсчитать', class: 'btn btn-default'

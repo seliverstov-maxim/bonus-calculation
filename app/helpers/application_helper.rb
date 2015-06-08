@@ -13,7 +13,7 @@ module ApplicationHelper
     BaseFormula
   end
 
-  def bonus_type_collection
+  def sales_bonus_type_collection
     %w[
       ds_development
       ds_design
@@ -28,6 +28,14 @@ module ApplicationHelper
       outstaff_ruby
       outstaff_markup
       outstaff_development
+    ].each_with_object({}) do |key, obj|
+      translate = t key
+      obj[translate] = key
+    end
+  end
+
+  def pm_bonus_type_collection
+    %w[
       pm_ahead_of_schedule
       pm_in_time
       pm_delayed_by_2_weeks_fault_customer

@@ -1,0 +1,8 @@
+.nested-fields
+  = f.input :result, input_html: {readonly: true}, hint: t('result')
+  = f.input :bonus_type, collection: pm_bonus_type_collection, hint: t('bonus_type')
+  = f.input :sum, as: :decimal, hint: t('sum')
+
+  = f.input :verbal_complaints, as: :decimal, hint: t('verbal_complaints')
+  = f.input :written_complaints, as: :decimal, hint: t('written_complaints')
+  = f.input :letters_of_thanks, as: :boolean, label: t('letters_of_thanks'), hint: ' '

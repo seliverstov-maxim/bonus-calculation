@@ -22,6 +22,11 @@
     :to: 100
     :coefficient: 1.2
 
+:default_seo_support_coefficients: &default_seo_support_coefficients
+  - :from: 0
+    :to: 100
+    :coefficient: 1
+
 :default_mulct_coefficients: &default_mulct_coefficients
   :no_contract: 0.5
   :no_prepayment: 0.5
@@ -43,13 +48,13 @@
   :ds_support:
     :base_percent: 8
     :percent_for_first_sale: 0
-    :prepayment_coefficients: *default_prepayment_coefficients
+    :prepayment_coefficients: *default_seo_support_coefficients
     :mulct_coefficients: *default_mulct_coefficients
 
   :ds_seo:
     :base_percent: 8
     :percent_for_first_sale: 0
-    :prepayment_coefficients: *default_prepayment_coefficients
+    :prepayment_coefficients: *default_seo_support_coefficients
     :mulct_coefficients: *default_mulct_coefficients
 
   :ds_development_for_perspective_customer:
@@ -73,13 +78,13 @@
   :p_support:
     :base_percent: 6
     :percent_for_first_sale: 1
-    :prepayment_coefficients: *default_prepayment_coefficients
+    :prepayment_coefficients: *default_seo_support_coefficients
     :mulct_coefficients: *default_mulct_coefficients
 
   :p_seo:
     :base_percent: 6
     :percent_for_first_sale: 1
-    :prepayment_coefficients: *default_prepayment_coefficients
+    :prepayment_coefficients: *default_seo_support_coefficients
     :mulct_coefficients: *default_mulct_coefficients
 
   :outsource_development:

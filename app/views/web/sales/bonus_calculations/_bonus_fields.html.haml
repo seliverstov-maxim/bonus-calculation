@@ -1,6 +1,6 @@
 .nested-fields
   = f.input :result, input_html: {readonly: true}, hint: t('result')
-  = f.input :bonus_type, collection: bonus_type_collection, hint: t('bonus_type')
+  = f.input :bonus_type, collection: sales_bonus_type_collection, hint: t('bonus_type')
   = f.input :sum, as: :decimal, hint: t('sum')
   = f.input :first_sale, as: :boolean, label: t('first_sale'), hint: ' '
 
@@ -10,8 +10,3 @@
 
   = f.input :prepayment_percent, as: :decimal, hint: t('prepayment_percent')
   = f.input :mulct_type, collection: mulct_type_collection, hint: t('mulct_type')
-
-  = f.input :verbal_complaints, as: :decimal, hint: t('verbal_complaints')
-  = f.input :written_complaints, as: :decimal, hint: t('written_complaints')
-  = f.input :letters_of_thanks, as: :boolean, label: t('letters_of_thanks'), hint: ' '
-
