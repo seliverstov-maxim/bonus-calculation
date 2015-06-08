@@ -32,7 +32,7 @@ en:
   prepayment_percent: 'Процент предоплаты'
 
   verbal_complaints: 'Количество устных жалоб'
-  written_complaints: 'Количество письменных жалобы'
+  written_complaints: 'Количество письменных жалоб'
   letters_of_thanks: 'Благодарственные письма'
 
   activerecord:

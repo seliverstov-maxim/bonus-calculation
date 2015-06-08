@@ -1,12 +1,13 @@
 .nested-fields
   = f.input :result, input_html: {readonly: true}, hint: t('result')
   = f.input :bonus_type, collection: bonus_type_collection, hint: t('bonus_type')
-  = f.input :first_sale, as: :boolean, label: t('first_sale'), hint: ' '
   = f.input :sum, as: :decimal, hint: t('sum')
+  = f.input :first_sale, as: :boolean, label: t('first_sale'), hint: ' '
 
   = f.input :monthly_income, as: :decimal, hint: t('monthly_income')
   = f.input :special_bonus, as: :decimal, hint: t('special_bonus')
   = f.input :month_count, as: :decimal, hint: t('month_count')
+
   = f.input :prepayment_percent, as: :decimal, hint: t('prepayment_percent')
   = f.input :mulct_type, collection: mulct_type_collection, hint: t('mulct_type')
 
