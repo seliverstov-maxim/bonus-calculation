@@ -1,6 +1,6 @@
 class Web::BonusCalculationsController < Web::ApplicationController
   def new
-    @form = BonusCalculationForm.new(BonusCalculation.new({bonuses: [Bonus.new(sum: 200), Bonus.new()]}))
+    @form = BonusCalculationForm.new(BonusCalculation.new({bonuses: [Bonus.new(), Bonus.new()]}))
   end
 
   def create
