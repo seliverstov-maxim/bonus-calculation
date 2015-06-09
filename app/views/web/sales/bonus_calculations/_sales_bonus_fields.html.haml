@@ -1,5 +1,6 @@
 .nested-fields
   = f.input :result, input_html: {readonly: true}, hint: t('result')
+  = f.input :contragent, hint: t('contragent')
   = f.input :bonus_type, collection: sales_bonus_type_collection, hint: t('bonus_type')
   = f.input :sum, as: :decimal, hint: t('sum')
   = f.input :first_sale, as: :boolean, label: t('first_sale'), hint: ' '

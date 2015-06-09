@@ -25,7 +25,7 @@
           %span.icon-bar
           %span.icon-bar
           %span.icon-bar
-        %a.navbar-brand(href="#") Bonuses
+        = link_to 'Bonusess', root_path, class: 'navbar-brand'
         %ul.nav.navbar-nav
           %li= link_to t('sales_bonus_calculations'), new_sales_bonus_calculation_path
           %li= link_to t('pm_bonus_calculations'), new_pm_bonus_calculation_path

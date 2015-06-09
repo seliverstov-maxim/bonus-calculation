@@ -3,7 +3,7 @@ class SalesBonusCalculationForm < Reform::Form
 
   collection :sales_bonuses do
     property :result
-
+    property :contragent
     property :bonus_type
     property :prepayment_percent
     property :mulct_type

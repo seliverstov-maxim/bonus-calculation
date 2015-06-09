@@ -4,6 +4,7 @@ class SalesBonus
   include VirtusBase
 
   attribute :result, Integer
+  attribute :contragent, String
   attribute :bonus_type, String
   attribute :prepayment_percent, Integer
   attribute :mulct_type, String
