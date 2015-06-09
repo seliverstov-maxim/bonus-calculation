@@ -16,7 +16,7 @@ class Web::Sales::BonusCalculationsController < Web::Sales::ApplicationControlle
         formula_params: SalesCalcParamsBuilder.build_for(b.bonus_type, b.attributes)
       })
       b.result = (result == 0) ? nil : result
-      @total_result += b.result
+      @total_result += result.to_i
     end
     @form = SalesBonusCalculationForm.new(SalesBonusCalculation.new({sales_bonuses: valid_bonuses}))
   end

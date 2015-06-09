@@ -16,7 +16,7 @@ class Web::Pm::BonusCalculationsController < Web::Pm::ApplicationController
         formula_params: PmCalcParamsBuilder.build_for(b.bonus_type, b.attributes)
       })
       b.result = (result == 0) ? nil : result
-      @total_result += b.result
+      @total_result += result.to_i
     end
     @form = PmBonusCalculationForm.new(PmBonusCalculation.new({pm_bonuses: valid_bonuses}))
   end

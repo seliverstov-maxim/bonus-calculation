@@ -1,8 +1,5 @@
 class SalesBonus
-  extend ActiveModel::Naming
-  extend ActiveModel::Translation
-  include ActiveModel::Conversion
-  include Virtus.model
+  include VirtusBase
 
   attribute :result, Integer
   attribute :bonus_type, String
@@ -15,16 +12,4 @@ class SalesBonus
   attribute :month_count, Integer
   attribute :monthly_income, Integer
   attribute :special_bonus, Integer
-
-  def persisted?
-    false
-  end
-
-  def has_attribute?(attr_name)
-    attributes.key? attr_name.to_sym
-  end
-
-  def column_for_attribute(name)
-    name
-  end
 end
