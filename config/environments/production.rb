@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.middleware.insert_after(::Rack::Runtime, "::Rack::Auth::Basic") do |u, p|
+    [u, p] == [ENV['APP_USERNAME'], ENV['APP_SECRET']]
+  end
 end
