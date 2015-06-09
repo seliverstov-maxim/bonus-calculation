@@ -1,11 +1,12 @@
 class Web::Pm::BonusCalculationsController < Web::Pm::ApplicationController
   def new
-    @form = PmBonusCalculationForm.new(BonusCalculation.new({bonuses: [Bonus.new(), Bonus.new()]}))
+    bonus_calculation = PmBonusCalculation.new({pm_bonuses: [PmBonus.new()]})
+    @form = PmBonusCalculationForm.new(bonus_calculation)
   end
 
   def create
-    attrs = params.fetch(:pm_bonus_calculation, {}).fetch(:bonuses_attributes, {}).values
-    valid_bonuses = attrs.map{|e| Bonus.new(e) }.select{|e| BonusContract.new(e).validate }
+    attrs = params.fetch(:pm_bonus_calculation, {}).fetch(:pm_bonuses_attributes, {}).values
+    valid_bonuses = attrs.map{|e| PmBonus.new(e) }.select{|e| BonusContract.new(e).validate }
 
     @total_result = 0
 
@@ -17,6 +18,6 @@ class Web::Pm::BonusCalculationsController < Web::Pm::ApplicationController
       b.result = (result == 0) ? nil : result
       @total_result += b.result
     end
-    @form = PmBonusCalculationForm.new(BonusCalculation.new({bonuses: valid_bonuses}))
+    @form = PmBonusCalculationForm.new(PmBonusCalculation.new({pm_bonuses: valid_bonuses}))
   end
 end

@@ -1,7 +1,7 @@
 class SalesBonusCalculationForm < Reform::Form
   include Reform::Form::ModelReflections
 
-  collection :bonuses do
+  collection :sales_bonuses do
     property :result
 
     property :bonus_type

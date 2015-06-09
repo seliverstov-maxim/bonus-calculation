@@ -1,7 +1,7 @@
 class PmBonusCalculationForm < Reform::Form
   include Reform::Form::ModelReflections
 
-  collection :bonuses do
+  collection :pm_bonuses do
     property :result
     property :bonus_type
     property :sum

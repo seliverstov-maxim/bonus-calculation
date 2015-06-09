@@ -1,4 +1,4 @@
-class Bonus
+class SalesBonus
   extend ActiveModel::Naming
   extend ActiveModel::Translation
   include ActiveModel::Conversion
@@ -16,14 +16,9 @@ class Bonus
   attribute :monthly_income, Integer
   attribute :special_bonus, Integer
 
-  attribute :verbal_complaints, Integer
-  attribute :written_complaints, Integer
-  attribute :letters_of_thanks, Boolean
-
   def persisted?
     false
   end
-
 
   def has_attribute?(attr_name)
     attributes.key? attr_name.to_sym

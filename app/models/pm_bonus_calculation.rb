@@ -1,10 +1,10 @@
-class BonusCalculation
+class PmBonusCalculation
   extend ActiveModel::Naming
   extend ActiveModel::Translation
   include ActiveModel::Conversion
   include Virtus.model
 
-  attribute :bonuses, Array[Bonus]
+  attribute :pm_bonuses, Array[PmBonus]
 
   def persisted?
     false

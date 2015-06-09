@@ -74,8 +74,7 @@ module ApplicationHelper
         html_options[:class] = [html_options[:class], "add_fields"].compact.join(' ')
         html_options[:'data-association'] = association.to_s.singularize
         html_options[:'data-associations'] = association.to_s.pluralize
-
-        new_object = Bonus.new
+        new_object = association.to_s.classify.constantize.new
         new_object = wrap_object.call(new_object) if wrap_object.respond_to?(:call)
 
         html_options[:'data-association-insertion-template'] = CGI.escapeHTML(render_association(association, f, new_object, form_parameter_name, render_options, override_partial).to_str).html_safe

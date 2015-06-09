@@ -7,8 +7,8 @@ $(function() {
   var fields_shown_for_other = ['sum', 'prepayment_percent', 'first_sale', 'mulct_type'];
   var fields_shown_for_seo_support = ['sum', 'first_sale', 'mulct_type'];
 
-  var hide_block = function(fields, name) { $(fields).find('.sales_bonus_calculation_bonuses_' + name).css('display', 'none') }
-  var show_block = function(fields, name) { $(fields).find('.sales_bonus_calculation_bonuses_' + name).css('display', 'inline-block') }
+  var hide_block = function(fields, name) { $(fields).find('.sales_bonus_calculation_sales_bonuses_' + name).css('display', 'none') }
+  var show_block = function(fields, name) { $(fields).find('.sales_bonus_calculation_sales_bonuses_' + name).css('display', 'inline-block') }
 
   var hide_autstaff_blocks = function(fields) { $.each(fields_shown_for_outstaff, function(i, block_name) { hide_block(fields, block_name) }); }
   var show_autstaff_blocks = function(fields) { $.each(fields_shown_for_outstaff, function(i, block_name) { show_block(fields, block_name) }); }
@@ -34,20 +34,20 @@ $(function() {
   }
 
   var update_each_nested_field = function() {
-    $('#new_sales_bonus_calculation .sales_bonus_calculation_bonuses_bonus_type select').each(function(i, e) {
+    $('#new_sales_bonus_calculation .sales_bonus_calculation_sales_bonuses_bonus_type select').each(function(i, e) {
       update_visibility_by_bonus_type(e.value, $(e).parents('.nested-fields')[0]);
     })
   }
 
-  $('#new_sales_bonus_calculation .sales_bonus_calculation_bonuses_bonus_type select').change(function(e) {
+  $('#new_sales_bonus_calculation .sales_bonus_calculation_sales_bonuses_bonus_type select').change(function(e) {
     update_each_nested_field();
   });
 
   update_each_nested_field();
 
   $(document).bind('cocoon:after-insert', function(e,inserted_item) {
-    $('#new_sales_bonus_calculation .sales_bonus_calculation_bonuses_bonus_type select').unbind();
-    $('#new_sales_bonus_calculation .sales_bonus_calculation_bonuses_bonus_type select').change(
+    $('#new_sales_bonus_calculation .sales_bonus_calculation_sales_bonuses_bonus_type select').unbind();
+    $('#new_sales_bonus_calculation .sales_bonus_calculation_sales_bonuses_bonus_type select').change(
       function(e) {
         update_each_nested_field();
       }
