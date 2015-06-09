@@ -3,8 +3,12 @@ class PmBonusCalculationForm < Reform::Form
 
   collection :pm_bonuses do
     property :result
+    property :contragent
+    property :contract_number
     property :bonus_type
     property :sum
+    property :spent
+    property :rest
 
     property :verbal_complaints
     property :written_complaints

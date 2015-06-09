@@ -7,6 +7,7 @@ module PmCalcParamsBuilder
     conf = @default_formulas_conf[:bonus_types][bonus_type.to_sym]
     res = {
       sum: custom_params[:sum],
+      spent: custom_params[:spent],
       base_percent: conf[:base_percent],
       deadline_percent: deadline_percent(custom_params[:bonus_type], conf[:deadline_bonus_coefficients]),
       mulct_or_thanks_bonus: mulct_or_thanks_bonus(custom_params[:verbal_complaints], custom_params[:written_complaints], custom_params[:letters_of_thanks], conf)

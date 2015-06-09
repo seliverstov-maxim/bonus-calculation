@@ -1,7 +1,11 @@
 .nested-fields
   = f.input :result, input_html: {readonly: true}, hint: t('result')
+  = f.input :contragent, hint: t('contragent')
+  = f.input :contract_number, hint: t('contract_number')
   = f.input :bonus_type, collection: pm_bonus_type_collection, hint: t('bonus_type')
-  = f.input :sum, as: :decimal, hint: t('sum')
+  = f.input :sum, as: :decimal, hint: t('project_budget')
+  = f.input :spent, as: :decimal, hint: t('spent')
+  = f.input :rest, as: :decimal, input_html: {readonly: true}, hint: t('rest')
 
   = f.input :verbal_complaints, as: :decimal, hint: t('verbal_complaints')
   = f.input :written_complaints, as: :decimal, hint: t('written_complaints')

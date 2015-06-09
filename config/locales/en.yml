@@ -38,6 +38,12 @@ en:
   month_count: 'Количество месяцев'
   prepayment_percent: 'Процент предоплаты'
 
+  project_budget: 'Бюджет проекта'
+  contragent: 'Контрагент'
+  contract_number: 'Номер контракта'
+  spent: 'Потрачено'
+  rest: 'Остаток'
+
   verbal_complaints: 'Количество устных жалоб'
   written_complaints: 'Количество письменных жалоб'
   letters_of_thanks: 'Благодарственные письма'
