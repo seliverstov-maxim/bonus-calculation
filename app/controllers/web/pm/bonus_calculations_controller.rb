@@ -5,19 +5,18 @@ class Web::Pm::BonusCalculationsController < Web::Pm::ApplicationController
   end
 
   def create
-    attrs = params.fetch(:pm_bonus_calculation, {}).fetch(:pm_bonuses_attributes, {}).values
-    valid_bonuses = attrs.map{|e| PmBonus.new(e) }.select{|e| BonusContract.new(e).validate }
+    b_calc = PmBonusCalculation.new calc_bonus_attrs
+    b_calc.pm_bonuses.each { |e| e.result = 0; e.calc if BonusContract.new(e).validate }
 
-    @total_result = 0
+    @form = PmBonusCalculationForm.new(b_calc)
+    @total_result = b_calc.pm_bonuses.reduce(0) { |sum, e| sum + e.result }
+  end
 
-    valid_bonuses.each do |b|
-      result = ::CalcService.calc({
-        calc_strategy: detect_calc_strategy(b.bonus_type),
-        formula_params: PmCalcParamsBuilder.build_for(b.bonus_type, b.attributes)
-      })
-      b.result = (result == 0) ? nil : result
-      @total_result += result.to_i
-    end
-    @form = PmBonusCalculationForm.new(PmBonusCalculation.new({pm_bonuses: valid_bonuses}))
+  private
+
+  def calc_bonus_attrs
+    {
+      pm_bonuses: params.fetch(:pm_bonus_calculation, {}).fetch(:pm_bonuses_attributes, {}).values
+    }
   end
 end

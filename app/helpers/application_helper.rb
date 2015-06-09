@@ -44,10 +44,4 @@ module ApplicationHelper
       obj[translate] = key
     end
   end
-
-  def detect_calc_strategy(bonus_type)
-    return OutstaffFormula if ['outstaff_ruby', 'outstaff_markup', 'outstaff_development'].include? bonus_type
-    return PmFormula if %w[pm_ahead_of_schedule pm_in_time pm_delayed_by_2_weeks_fault_customer pm_delayed_by_2_weeks_fault_company pm_delayed_by_4_weeks_fault_company].include? bonus_type
-    BaseFormula
-  end
 end
