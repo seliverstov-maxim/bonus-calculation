@@ -4,7 +4,7 @@ class Web::Pm::BonusCalculationsController < Web::Pm::ApplicationController
   end
 
   def create
-    attrs = params[:pm_bonus_calculation][:bonuses_attributes].values
+    attrs = params.fetch(:pm_bonus_calculation, {}).fetch(:bonuses_attributes, {}).values
     valid_bonuses = attrs.map{|e| Bonus.new(e) }.select{|e| BonusContract.new(e).validate }
 
     @total_result = 0
