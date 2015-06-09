@@ -1,7 +1,11 @@
 module ApplicationHelper
 
   def mulct_type_collection
-    %w[no_contract no_latter no_prepayment].each_with_object({}) do |key, obj|
+    %w[
+      no_contract
+      no_latter
+      no_prepayment
+    ].each_with_object({}) do |key, obj|
       translate = t key
       obj[translate] = key
     end

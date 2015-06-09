@@ -1,5 +1,5 @@
 en:
-  sales_bonus_calculations: 'Расчет для продажников'
+  sales_bonus_calculations: 'Расчет для менеджеров по продажам'
   pm_bonus_calculations: 'Расчет для менеджеров проектов'
 
   bonus_calculations: 'Расчет бонусов'
@@ -23,6 +23,10 @@ en:
   pm_delayed_by_2_weeks_fault_customer: 'Проект задержан на 2 недели по вине заказчика'
   pm_delayed_by_2_weeks_fault_company: 'Проект задержан на 2 недели по вине компании'
   pm_delayed_by_4_weeks_fault_company: 'Проект задержан на 4 недели по вине компании'
+
+  no_contract: 'Без договора или скана'
+  no_latter: 'Без согласующего письма'
+  no_prepayment: 'Без предоплаты'
 
   result: 'Результат'
   bonus_type: 'Тип бонуса'
